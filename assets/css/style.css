@@ -10,4 +10,14 @@
     width: 75vw;
     height: 25vw;
     border: 1px solid black;
+    position: relative;
+}
+
+#player{
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid black;
+    background-color: green;
+    position: absolute;
+    top: calc(100% - 8rem) /*Put player on the bottom line of the game area*/
 }
