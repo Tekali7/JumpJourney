@@ -1,0 +1,13 @@
+/*---Asterisk selector to remove general styles---*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#game-area{
+    margin: 12.5vw;
+    width: 75vw;
+    height: 25vw;
+    border: 1px solid black;
+}
