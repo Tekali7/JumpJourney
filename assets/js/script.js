@@ -1,24 +1,36 @@
+// Wait for the DOM to fully load before executing the code (Adapted from the walkthrough project)
 document.addEventListener("DOMContentLoaded", function () {
-    // Wait for the DOM to be fully loaded before executing the code
 
-    // Select the obstacle element
+    // Get the obstacle
     let obstacle = document.getElementById("obstacle");
 
-    // Set the initial position of the obstacle
-    let obstaclePosition = 2200; // You can adjust the starting position as needed
+    // Starting position of the obstacle
+    let obstaclePosition = 2200;
 
-    // Set the interval to move the obstacle
+    // Learned from java2s setInterval() Move element
     let obstacleMoveInterval = setInterval(function () {
-        // Update the obstacle position
-        obstaclePosition -= 3; // Adjust the speed by changing this value
+        obstaclePosition -= 3;
 
-        // Update the obstacle's right position
+        // Update the obstacles right position
         obstacle.style.left = obstaclePosition + "px";
 
-        // Check if the obstacle has reached the left edge of the game area
+        // Resetting the obstacle back to the right
         if (obstaclePosition <= -150) {
-            // Reset the obstacle position to the right edge
-            obstaclePosition = 2200; // You can adjust the starting position as needed
+            obstaclePosition = 2200;
         }
-    }, 10); // Adjust the interval as needed (milliseconds)
+    }, 10);
+
+    // Get the player character
+    let player = document.getElementById("player");
+
+    // Starting position of the player character
+    let playerPosition = 0;
+
+    // Function, move character up in y if position is zero
+    window.addEventListener("click", function() {
+        if(playerPosition === 0){
+            playerPosition = 50;
+            player.style.bottom = playerPosition + "px";
+        }
+    });
 });
