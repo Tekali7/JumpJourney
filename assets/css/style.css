@@ -5,12 +5,24 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: burlywood;
+}
+
+h1{
+    text-align: center;
+    font-size: 5rem;
+    position: relative;
+    top: 15rem;
+}
+
 #game-area{
     margin: 12.5vw;
     width: 75vw;
     height: 25vw;
     border: 1px solid black;
     position: relative;
+    background-color: lightblue;
 }
 
 #player{
@@ -31,4 +43,13 @@
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+#ground{
+    background-color: rgb(75, 25, 25);
+    margin: 12.5vw;
+    width: 75vw;
+    height: 10rem;
+    position: absolute;
+    top: 28.2vw;
 }
