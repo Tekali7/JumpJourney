@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Set sec to 0
 let sec = 0;
 
-    // if val is greater than 9 return val, else with string "0"
+    // if val is greater than 9 return val, else with string "0" infront of val
     function timer(val) {
     if (val > 9) {
         return val;
@@ -13,12 +13,13 @@ let sec = 0;
     }
     }
 
-    // Divide sec by 0 
+    // Divide sec by 60 
     function updateScore() {
     document.getElementById("score").innerHTML = "Current Score: " + timer(sec % 60);
     sec++;
     }
 
+    // Call the updateScore function every second
 setInterval(updateScore, 1000);
 
     // Get the obstacle

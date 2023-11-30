@@ -7,24 +7,26 @@
 
 body{
     background-color: burlywood;
+    overflow: hidden;
 }
 
 h1{
     text-align: center;
     font-size: 5rem;
     position: relative;
-    top: 15rem;
+    top: 8rem;
 }
 
 p{
     text-align: center;
     font-size: 4rem;
     position: relative;
-    top: 18rem;
+    top: 10rem;
 }
 
 #game-area{
     margin: 12.5vw;
+    margin-top: 8vw;
     width: 75vw;
     height: 25vw;
     border: 1px solid black;
@@ -59,5 +61,5 @@ p{
     width: 75vw;
     height: 10rem;
     position: absolute;
-    top: 30.8vw;
+    top: 26.3vw;
 }
