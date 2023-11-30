@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Learned from java2s setInterval() Move element
     let obstacleMoveInterval = setInterval(function () {
-        obstaclePosition -= 3;
+        obstaclePosition -= 5;
 
         // Update the obstacles right position
         obstacle.style.left = obstaclePosition + "px";
@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function, move character up in y if position is zero
     window.addEventListener("click", function() {
         if(playerPosition === 0){
-            playerPosition = 50;
+            playerPosition = 200;
             player.style.bottom = playerPosition + "px";
 
             setTimeout(function() {
                 playerPosition = 0;
                 player.style.bottom = playerPosition + "px";
-            }, 500);
+            }, 700);
         }
     });
 });
