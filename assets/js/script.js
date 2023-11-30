@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if(playerPosition === 0){
             playerPosition = 50;
             player.style.bottom = playerPosition + "px";
+
+            setTimeout(function() {
+                playerPosition = 0;
+                player.style.bottom = playerPosition + "px";
+            }, 500);
         }
     });
 });
