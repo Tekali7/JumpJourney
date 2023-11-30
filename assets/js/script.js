@@ -1,6 +1,26 @@
 // Wait for the DOM to fully load before executing the code (Adapted from the walkthrough project)
 document.addEventListener("DOMContentLoaded", function () {
 
+// Set sec to 0
+let sec = 0;
+
+    // if val is greater than 9 return val, else with string "0"
+    function timer(val) {
+    if (val > 9) {
+        return val;
+    } else{
+        return "0" + val;
+    }
+    }
+
+    // Divide sec by 0 
+    function updateScore() {
+    document.getElementById("score").innerHTML = "Current Score: " + timer(sec % 60);
+    sec++;
+    }
+
+setInterval(updateScore, 1000);
+
     // Get the obstacle
     let obstacle = document.getElementById("obstacle");
 
