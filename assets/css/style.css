@@ -24,14 +24,23 @@ p{
     top: 10rem;
 }
 
+#game-world{
+    width: 75vw;
+    height: 25vw;
+    margin-top: 25vw;
+    position: relative;
+    --ground-height: 10rem;
+}
+
 #game-area{
     margin: 12.5vw;
     margin-top: 8vw;
     width: 75vw;
     height: 25vw;
     border: 1px solid black;
-    position: relative;
+    position: absolute;
     background-color: lightblue;
+    bottom: var(--ground-height);
 }
 
 #player{
@@ -59,7 +68,8 @@ p{
     background-color: rgb(75, 25, 25);
     margin: 12.5vw;
     width: 75vw;
-    height: 10rem;
+    height: var(--ground-height);
     position: absolute;
-    top: 26.3vw;
+    bottom: 0;
+    left: 0;
 }
