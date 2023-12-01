@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function () { // Wait for the DOM 
 
     // Timer 
     function updateScore() {
-    document.getElementById("score").innerHTML = "Current Score: " + timer(sec % 60);
+    document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
     sec++;
     }
-    
+
     // Call the updateScore function every second
-setInterval(updateScore, 1000);
+setInterval(updateScore, 250);
 
     // Learned from java2s setInterval() Move element
     let obstacleMoveInterval = setInterval(updateObstaclePosition, 10); 
