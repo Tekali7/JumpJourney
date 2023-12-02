@@ -31,6 +31,9 @@ function updateObstaclePosition() {
     // Resetting the obstacle back to the right
     if (obstaclePosition <= -150) {
         obstaclePosition = 2200;
+        obstacle.style.display = "none";
+    } else {
+        obstacle.style.display = "block";
     }
 }
 
