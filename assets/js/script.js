@@ -31,9 +31,13 @@ function updateObstaclePosition() {
     // Resetting the obstacle back to the right
     if (obstaclePosition <= -150) {
         obstaclePosition = 2200;
-        obstacle.style.display = "none";
+}
+
+    // Make the obstacle gradually disappear at x+5
+    if (obstaclePosition <= 5){
+        obstacle.style.opacity = "0";
     } else {
-        obstacle.style.display = "block";
+        obstacle.style.opacity = "1";
     }
 }
 
@@ -46,7 +50,7 @@ function playerJump(){
                 playerPosition = 0;
                 player.style.bottom = playerPosition + "px";
             }, 750);
-};
+}
 
 // if val is greater than 9 return val, else with string "0" infront of val
 function timer(val) {
@@ -55,7 +59,7 @@ function timer(val) {
     } else{
         return "0" + val;
     }
-};
+}
 
 // Score
 function updateScore() {
