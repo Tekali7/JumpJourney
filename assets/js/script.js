@@ -6,22 +6,27 @@ let sec; // Declare sec
 let obstaclePosition; // Declare obstacle position 
 let playerPosition; // Declare player position
 let obstacleMoveInterval;
+let playerTop;
+let obstacleLeft;
 
 document.addEventListener("DOMContentLoaded", loadGame); // Wait for the DOM to fully load before executing the code (Adapted from the walkthrough project)
 window.addEventListener("click", playerJump); // Function, move character up in y if position is zero (Jump)
 window.addEventListener("keydown", checkUpKey);
 setInterval(updateScore, 250); // Call the updateScore function every quarter of a second
+setInterval(checkCollision, 10); // Check if player and obstacle touch every 10ms
 
 function loadGame() {
     sec = 0;
     obstaclePosition = 2200; // Starting position of the obstacle
     playerPosition = 0; // Starting position of the player character
     obstacleMoveInterval = setInterval(updateObstaclePosition, 10); // Adapted from java2s.com setInterval() move element chapter
+    playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
+    obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
 }
 
     /*
     * Resets obstacle position to the right 
-    * to the right if a certain point is reached
+    * if a certain point is reached
     */
 function updateObstaclePosition() {
     obstaclePosition -= 5;
@@ -72,4 +77,17 @@ function timer(val) {
 function updateScore() {
     document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
     sec++;
+}
+
+// Collision detection
+function checkCollision(){
+
+    playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
+    obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+
+    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 200){
+        clearInterval(obstacleMoveInterval); // Stop the obstacle from moving
+        obstacle.style.display = "none";
+        alert("Game over, your final score was: " + timer(sec));
+    }
 }
