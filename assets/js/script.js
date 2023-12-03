@@ -85,7 +85,7 @@ function checkCollision(){
     playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
     obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
 
-    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 200){
+    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 450){
         clearInterval(obstacleMoveInterval); // Stop the obstacle from moving
         obstacle.style.display = "none";
         alert("Game over, your final score was: " + timer(sec));
