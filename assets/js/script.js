@@ -9,6 +9,7 @@ let obstacleMoveInterval;
 
 document.addEventListener("DOMContentLoaded", loadGame); // Wait for the DOM to fully load before executing the code (Adapted from the walkthrough project)
 window.addEventListener("click", playerJump); // Function, move character up in y if position is zero (Jump)
+window.addEventListener("keydown", checkUpKey);
 setInterval(updateScore, 250); // Call the updateScore function every quarter of a second
 
 function loadGame() {
@@ -50,6 +51,12 @@ function playerJump(){
                 playerPosition = 0;
                 player.style.bottom = playerPosition + "px";
             }, 750);
+}
+
+function checkUpKey(event){
+    if (event.key === "ArrowUp"){
+        playerJump();
+    }
 }
 
 // if val is greater than 9 return val, else with string "0" infront of val
