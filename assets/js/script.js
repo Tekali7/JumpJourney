@@ -8,6 +8,7 @@ let playerPosition; // Declare player position
 let obstacleMoveInterval;
 let playerTop;
 let obstacleLeft;
+let scoreUpdateInterval;
 
 document.addEventListener("DOMContentLoaded", loadGame); // Wait for the DOM to fully load before executing the code (Adapted from the walkthrough project)
 window.addEventListener("click", playerJump); // Function, move character up in y if position is zero (Jump)
@@ -17,11 +18,10 @@ setInterval(checkCollision, 10); // Check if player and obstacle touch every 10m
 
 function loadGame() {
     sec = 0;
-    obstaclePosition = 2200; // Starting position of the obstacle
+    obstaclePosition = 2000; // Starting position of the obstacle
     playerPosition = 0; // Starting position of the player character
     obstacleMoveInterval = setInterval(updateObstaclePosition, 10); // Adapted from java2s.com setInterval() move element chapter
-    playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
-    obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+    scoreUpdateInterval = setInterval(updateScore, 250);
 }
 
     /*
@@ -36,7 +36,7 @@ function updateObstaclePosition() {
 
     // Resetting the obstacle back to the right
     if (obstaclePosition <= -150) {
-        obstaclePosition = 2200;
+        obstaclePosition = 2000;
 }
 
     // Make the obstacle gradually disappear at x+5
@@ -76,7 +76,7 @@ function timer(val) {
 // Score
 function updateScore() {
     document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
-    sec++;
+    ++sec;
 }
 
 // Collision detection
@@ -84,10 +84,12 @@ function checkCollision(){
 
     playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
     obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+    
 
-    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 450){
+    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 500){
+
         clearInterval(obstacleMoveInterval); // Stop the obstacle from moving
-        obstacle.style.display = "none";
-        alert("Game over, your final score was: " + timer(sec));
+        clearInterval(scoreUpdateInterval);
+        alert("Game over, your final score is: " + timer(--sec));
     }
 }
