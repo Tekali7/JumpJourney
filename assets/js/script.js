@@ -11,6 +11,7 @@ let obstacleMoveInterval;
 let playerTop;
 let obstacleLeft;
 let scoreUpdateInterval;
+let isModalOpen = false;
 
 document.addEventListener("DOMContentLoaded", loadGame); // Wait for the DOM to fully load before executing the code (Adapted from the walkthrough project)
 closeModalButton.addEventListener("click", closeModal);
@@ -31,10 +32,12 @@ function loadGame() {
 
 function showModal(){
     modal.style.display = "block";
+    isModalOpen = true;
 }
 
 function closeModal(){
     modal.style.display = "none";
+    isModalOpen = false;
 }
 
     /*
@@ -42,10 +45,9 @@ function closeModal(){
     * if a certain point is reached
     */
 function updateObstaclePosition() {
+    if (!isModalOpen){
     obstaclePosition -= 5;
-
-    // Update the obstacles right position
-    obstacle.style.left = obstaclePosition + "px";
+    obstacle.style.left = obstaclePosition + "px"; // Update the obstacles right position
 
     // Resetting the obstacle back to the right
     if (obstaclePosition <= -150) {
@@ -57,6 +59,7 @@ function updateObstaclePosition() {
         obstacle.style.opacity = "0";
     } else {
         obstacle.style.opacity = "1";
+        }
     }
 }
 
@@ -94,6 +97,7 @@ function updateScore() {
 
 // Collision detection
 function checkCollision(){
+    if (!isModalOpen){
 
     playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
     obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
@@ -104,5 +108,6 @@ function checkCollision(){
         clearInterval(obstacleMoveInterval); // Stop the obstacle from moving
         clearInterval(scoreUpdateInterval);
         alert("Game over, your final score is: " + timer(--sec));
+        }
     }
 }
