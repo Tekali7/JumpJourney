@@ -20,13 +20,11 @@ The user controls a character which can be controlled using either the left mous
         * [Visitor Goals](https://github.com/Tekali7/)
 
 * [Features](https://github.com/Tekali7/)
-    * [Hero](https://github.com/Tekali7/)
-    * [Navigation](https://github.com/Tekali7/)
-    * [Homepage](https://github.com/Tekali7/)
-    * [Menu](https://github.com/Tekali7/)
-    * [Contact](https://github.com/Tekali7/)
-    * [Form](https://github.com/Tekali7/)
-    * [Footer](https://github.com/Tekali7/)
+    * [User-Friendly Interface](https://github.com/Tekali7/)
+    * [Score Counter](https://github.com/Tekali7/)
+    * [Game over alert](https://github.com/Tekali7/)
+    * [Instructions Modal](https://github.com/Tekali7/)
+    * [Collision Detection](https://github.com/Tekali7/)
     * [Future implementations](https://github.com/Tekali7/)
 
 * [Technology](https://github.com/Tekali7/)
@@ -90,7 +88,7 @@ The website consists of one page with numerous features which offer the user a p
 The interface of the website is very user-friendly and is designed to provide easy navigation and gameplay. For example: The user can click anywhere on the screen to let the player jump.
 ![User-Interface](assets/readme-imgs/user-interface.webp)
 
-## Score counter
+## Score Counter
 
 The score counter captures the current score that the user managed to play. This encourages the user to replay the game to try and break their recent high-score.
 ![Score counter](assets/readme-imgs/score-counter.webp)
