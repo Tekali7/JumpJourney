@@ -1,6 +1,8 @@
 
 let obstacle = document.getElementById("obstacle"); // Get the obstacle
 let player = document.getElementById("player"); // Get the player character
+let closeModalButton = document.getElementById("closeModal");
+let modal = document.getElementById("modal-box");
 
 let sec; // Declare sec
 let obstaclePosition; // Declare obstacle position 
@@ -11,17 +13,28 @@ let obstacleLeft;
 let scoreUpdateInterval;
 
 document.addEventListener("DOMContentLoaded", loadGame); // Wait for the DOM to fully load before executing the code (Adapted from the walkthrough project)
+closeModalButton.addEventListener("click", closeModal);
 window.addEventListener("click", playerJump); // Function, move character up in y if position is zero (Jump)
 window.addEventListener("keydown", checkUpKey);
 setInterval(updateScore, 250); // Call the updateScore function every quarter of a second
 setInterval(checkCollision, 10); // Check if player and obstacle touch every 10ms
 
 function loadGame() {
+    showModal();
+
     sec = 0;
     obstaclePosition = 2000; // Starting position of the obstacle
     playerPosition = 0; // Starting position of the player character
     obstacleMoveInterval = setInterval(updateObstaclePosition, 10); // Adapted from java2s.com setInterval() move element chapter
     scoreUpdateInterval = setInterval(updateScore, 250);
+}
+
+function showModal(){
+    modal.style.display = "block";
+}
+
+function closeModal(){
+    modal.style.display = "none";
 }
 
     /*
