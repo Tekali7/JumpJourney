@@ -67,6 +67,8 @@ function updateObstaclePosition() {
 }
 
 function playerJump(){
+    if (!isModalOpen){
+
         if (playerPosition === 0){
             playerPosition = 200;
             player.style.bottom = playerPosition + "px";}
@@ -75,6 +77,7 @@ function playerJump(){
                 playerPosition = 0;
                 player.style.bottom = playerPosition + "px";
             }, 750);
+    }
 }
 
 function checkUpKey(event){
@@ -108,7 +111,7 @@ function checkCollision(){
     obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
     
 
-    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 200){
+    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 210){
 
         clearInterval(obstacleMoveInterval); // Stop the obstacle from moving
         clearInterval(scoreUpdateInterval);
