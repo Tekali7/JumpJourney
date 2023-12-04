@@ -3,6 +3,7 @@ let obstacle = document.getElementById("obstacle"); // Get the obstacle
 let player = document.getElementById("player"); // Get the player character
 let closeModalButton = document.getElementById("closeModal");
 let modal = document.getElementById("modal-box");
+let overlay = document.getElementById("overlay");
 
 let sec; // Declare sec
 let obstaclePosition; // Declare obstacle position 
@@ -24,7 +25,7 @@ function loadGame() {
     showModal();
 
     sec = 0;
-    obstaclePosition = 2000; // Starting position of the obstacle
+    obstaclePosition = 1350; // Starting position of the obstacle
     playerPosition = 0; // Starting position of the player character
     obstacleMoveInterval = setInterval(updateObstaclePosition, 10); // Adapted from java2s.com setInterval() move element chapter
     scoreUpdateInterval = setInterval(updateScore, 250);
@@ -32,11 +33,13 @@ function loadGame() {
 
 function showModal(){
     modal.style.display = "block";
+    overlay.style.display ="block";
     isModalOpen = true;
 }
 
 function closeModal(){
     modal.style.display = "none";
+    overlay.style.display = "none";
     isModalOpen = false;
 }
 
@@ -51,7 +54,7 @@ function updateObstaclePosition() {
 
     // Resetting the obstacle back to the right
     if (obstaclePosition <= -150) {
-        obstaclePosition = 2000;
+        obstaclePosition = 1350;
 }
 
     // Make the obstacle gradually disappear at x+5
@@ -105,7 +108,7 @@ function checkCollision(){
     obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
     
 
-    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 500){
+    if(obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 200){
 
         clearInterval(obstacleMoveInterval); // Stop the obstacle from moving
         clearInterval(scoreUpdateInterval);

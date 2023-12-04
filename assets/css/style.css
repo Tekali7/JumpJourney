@@ -14,22 +14,29 @@ h1{
     text-align: center;
     font-size: 5rem;
     position: relative;
-    top: 8rem;
+    top: 5rem;
 }
 
 #score{
     text-align: center;
     font-size: 4rem;
     position: relative;
-    top: 10rem;
+    top: 5rem;
 }
 
 div p{
     text-align: center;
     font-size: 4rem;
     position: relative;
-    padding-top: 4rem;
-    padding-bottom: 8rem;
+    bottom: 4rem;
+}
+
+#left-mouse-button{
+    padding-bottom: 1.5rem;
+}
+
+img{
+    bottom: 3rem;
 }
 
 #game-world{
@@ -87,13 +94,13 @@ div p{
 .modal{
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 40vw;
     width: 35vw;
-    background-color: rgb(235, 235, 208);
+    background-color: burlywood;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -118,4 +125,15 @@ div p{
     font-size: 6rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
 }
