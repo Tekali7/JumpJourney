@@ -91,8 +91,10 @@ function timer(val) {
 
 // Score
 function updateScore() {
+    if (!isModalOpen){
     document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
     ++sec;
+    }
 }
 
 // Collision detection

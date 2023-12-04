@@ -17,12 +17,19 @@ h1{
     top: 8rem;
 }
 
-p{
+#score{
     text-align: center;
     font-size: 4rem;
     position: relative;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    top: 10rem;
+}
+
+div p{
+    text-align: center;
+    font-size: 4rem;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
 }
 
 #game-world{
