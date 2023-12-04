@@ -21,7 +21,8 @@ p{
     text-align: center;
     font-size: 4rem;
     position: relative;
-    top: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
 }
 
 #game-world{
@@ -85,8 +86,29 @@ p{
     transform: translate(-50%, -50%);
     height: 40vw;
     width: 35vw;
-    background-color: white;
+    background-color: rgb(235, 235, 208);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content{
+    position: relative;
+    z-index: 2;
+}
+
+.modal-content img{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 8vw;
+    height: 8vw;
+}
+
+#closeModal{
+    font-size: 6rem;
+    font-weight: bold;
+    cursor: pointer;
 }
