@@ -13,60 +13,54 @@ The user controls a character which can be controlled using either the left mous
 
 # Table of contents:
 
-* [Project Goal](https://github.com/Tekali7/)
-* [User Demographic](https://github.com/Tekali7/)
+* [User Demographic](https://github.com/Tekali7/JumpJourney#user-demographic)
 
-* [User Experience](https://github.com/Tekali7/)
-    * [User stories](https://github.com/Tekali7/)
-        * [Visitor Goals](https://github.com/Tekali7/)
+* [User Experience](https://github.com/Tekali7/JumpJourney#user-experience)
+    * [User stories](https://github.com/Tekali7/JumpJourney#user-stories)
+        * [Visitor Goals](https://github.com/Tekali7/JumpJourney#visitor-goals)
 
-* [Features](https://github.com/Tekali7/)
-    * [Header/Navigation](https://github.com/Tekali7/)
-    * [User-Friendly Interface](https://github.com/Tekali7/)
-    * [Sound effects]()
-    * [Score Counter](https://github.com/Tekali7/)
-    * [Game over SweetAlert](https://github.com/Tekali7/)
-    * [Instructions Modal](https://github.com/Tekali7/)
-    * [Collision Detection](https://github.com/Tekali7/)
-    * [Future implementations](https://github.com/Tekali7/)
+* [Features](https://github.com/Tekali7/JumpJourney#features)
+    * [Header/Navigation](https://github.com/Tekali7/JumpJourney#headernavigation)
+    * [User-Friendly Interface](https://github.com/Tekali7/JumpJourney#user-friendly-interface)
+    * [Sound effects](https://github.com/Tekali7/JumpJourney#sound-effects)
+    * [Score Counter](https://github.com/Tekali7/JumpJourney#score-counter)
+    * [Game over SweetAlert](https://github.com/Tekali7/JumpJourney#game-over-sweetalert)
+    * [Instructions Modal](https://github.com/Tekali7/JumpJourney#instructions-modal)
+    * [Collision Detection](https://github.com/Tekali7/JumpJourney#collision-detection)
+    * [Future implementations](https://github.com/Tekali7/JumpJourney#future-implementations)
 
-* [Technology](https://github.com/Tekali7/)
-    * [Languages](https://github.com/Tekali7/)
-    * [Frameworks, Libraries and Programs](https://github.com/Tekali7/)
+* [Technology](https://github.com/Tekali7/JumpJourney#technology)
+    * [Languages](https://github.com/Tekali7/JumpJourney#languages)
+    * [Frameworks, Libraries and Programs](https://github.com/Tekali7/JumpJourney#frameworks-libraries-and-programs)
 
-* [Design](https://github.com/Tekali7/)
-    * [Typography](https://github.com/Tekali7/)
-    * [Color scheme](https://github.com/Tekali7/)
-    * [Wireframes](https://github.com/Tekali7/)
+* [Design](https://github.com/Tekali7/JumpJourney#design)
+    * [Typography](https://github.com/Tekali7/JumpJourney#typography)
+    * [Color scheme](https://github.com/Tekali7/JumpJourney#color-scheme)
+    * [Wireframes](https://github.com/Tekali7/JumpJourney#wireframes)
 
-* [Testing](https://github.com/Tekali7/)
-    * [Validator Testing](https://github.com/Tekali7/)
-        * [W3C HTML Validator](https://github.com/Tekali7/)
-        * [W3C CSS Validator](https://github.com/Tekali7/)
-        * [JSHint]()
-    * [Lighthouse Testing](https://github.com/Tekali7/)
-    * [Manual Testing](https://github.com/Tekali7/)
-        * [Features Testing](https://github.com/Tekali7/)
-        * [Device Testing](https://github.com/Tekali7/)
-        * [Browser Compatibility](https://github.com/Tekali7/)
-    * [Fixed Bugs](https://github.com/Tekali7/)
-    * [Known Bugs]()
+* [Testing](https://github.com/Tekali7/JumpJourney#testing)
+    * [Validator Testing](https://github.com/Tekali7/JumpJourney#validator-testing)
+        * [W3C HTML Validator](https://github.com/Tekali7/JumpJourney#html-validator)
+        * [W3C CSS Validator](https://github.com/Tekali7/JumpJourney#css-validator)
+        * [JSHint](https://github.com/Tekali7/JumpJourney#jshint)
+    * [Lighthouse Testing](https://github.com/Tekali7/JumpJourney#lighthouse-testing)
+    * [Manual Testing](https://github.com/Tekali7/JumpJourney#manual-testing)
+        * [Features Testing](https://github.com/Tekali7/JumpJourney#features-testing)
+        * [Device Testing](https://github.com/Tekali7/JumpJourney#device-testing)
+        * [Browser Compatibility](https://github.com/Tekali7/JumpJourney#browser-compatibility)
+    * [Fixed Bugs](https://github.com/Tekali7/JumpJourney#fixed-bugs)
+    * [Known Bugs](https://github.com/Tekali7/JumpJourney#known-bugs)
 
-* [Deployment](https://github.com/Tekali7/)
-    * [How to Deploy](https://github.com/Tekali7/)
-    * [How to Fork](https://github.com/Tekali7/)
-    * [How to Clone](https://github.com/Tekali7/)
+* [Deployment](https://github.com/Tekali7/JumpJourney#deployment)
+    * [How to Deploy](https://github.com/Tekali7/JumpJourney#how-to-deploy)
+    * [How to Fork](https://github.com/Tekali7/JumpJourney#how-to-fork)
+    * [How to Clone](https://github.com/Tekali7/JumpJourney#how-to-clone)
 
-* [Credits](https://github.com/Tekali7/)
-    * [Content](https://github.com/Tekali7/)
-    * [Code](https://github.com/Tekali7/)
-    * [Media](https://github.com/Tekali7/)
+* [Credits](https://github.com/Tekali7/JumpJourney#credits)
+    * [Code](https://github.com/Tekali7/JumpJourney#code)
+    * [Media](https://github.com/Tekali7/JumpJourney#media)
 
-* [Acknowledgments](https://github.com/Tekali7/)
-
-# Project goal
-
-The primary object goal is to provide the user with a fun and relaxing gaming experience.
+* [Acknowledgments](https://github.com/Tekali7/JumpJourney#acknowledgments)
 
 # User Demographic
 
@@ -347,7 +341,7 @@ Cloning allows you to make an exact copy of a code repository, usually for colla
 
 - The code for the instructions modal was learned from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
 
--The code for the SweetAlert was adapted from [ChatGPT](https://chat.openai.com/)
+- The code for the SweetAlert was adapted from [ChatGPT](https://chat.openai.com/)
 
 ## Media
 
