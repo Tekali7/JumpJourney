@@ -65,6 +65,8 @@ function playerJump() {
         if (playerPosition === 0) {
             playerPosition = 200;
             player.style.bottom = playerPosition + "px";
+
+            document.getElementById("jumpSound").play();
         }
 
         setTimeout(function () {
@@ -108,7 +110,9 @@ function checkCollision() {
 
                 clearInterval(obstacleMoveInterval);
                 clearInterval(scoreUpdateInterval);
-                clearInterval(collisionCheckInterval)
+                clearInterval(collisionCheckInterval);
+
+                document.getElementById("collisionSound").play();
 
                 // Set updateScoreFlag to false to stop score updates
                 updateScoreFlag = false;
