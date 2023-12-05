@@ -1,19 +1,19 @@
-/*Google fonts import Merriweather and News Cycle*/
+/* Google fonts import Merriweather and News Cycle */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=News+Cycle:wght@400;700&display=swap');
 
-/*---Asterisk selector to remove general styles---*/
-*{
+/* Asterisk selector to remove general styles */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: burlywood;
     overflow: hidden;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 5rem;
     font-family: 'Merriweather', serif;
@@ -23,11 +23,11 @@ h1{
     color: black;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-#score{
+#score {
     text-align: center;
     font-size: 4rem;
     font-family: 'News Cycle', sans-serif;
@@ -35,18 +35,18 @@ a{
     top: 5rem;
 }
 
-div p{
+div p {
     text-align: center;
     font-size: 4rem;
     position: relative;
     bottom: 4rem;
 }
 
-#left-mouse-button{
+#left-mouse-button {
     padding-bottom: 1.5rem;
 }
 
-#game-world{
+#game-world {
     width: 75vw;
     height: 25vw;
     margin-top: 25vw;
@@ -54,7 +54,7 @@ div p{
     --ground-height: 10rem;
 }
 
-#game-area{
+#game-area {
     margin: 12.5vw;
     margin-top: 8vw;
     width: 75vw;
@@ -65,7 +65,7 @@ div p{
     bottom: var(--ground-height);
 }
 
-#player{
+#player {
     width: 8rem;
     height: 8rem;
     border: 1px solid black;
@@ -75,7 +75,7 @@ div p{
     left: 5rem;
 }
 
-#obstacle{
+#obstacle {
     width: 6rem;
     height: 6rem;
     border: 1px solid black;
@@ -88,7 +88,7 @@ div p{
     transition: opacity 0.1s ease-in;
 }
 
-#ground{
+#ground {
     background-color: rgb(75, 25, 25);
     margin: 12.5vw;
     width: 75vw;
@@ -98,7 +98,7 @@ div p{
     left: 0;
 }
 
-.modal{
+.modal {
     display: none;
     position: fixed;
     z-index: 2;
@@ -113,12 +113,12 @@ div p{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.modal-content{
+.modal-content {
     position: relative;
     z-index: 2;
 }
 
-.modal-content img{
+.modal-content img {
     position: relative;
     z-index: 2;
     text-align: center;
@@ -129,7 +129,7 @@ div p{
     bottom: 3rem;
 }
 
-#closeModal{
+#closeModal {
     font-size: 6rem;
     font-weight: bold;
     cursor: pointer;
@@ -148,47 +148,46 @@ div p{
 
 /* Media Query for screens < 320px */
 @media (max-width: 319px) {
-
-    body{
+    body {
         background-color: burlywood;
         overflow: hidden;
         font-size: 1rem;
     }
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 2.5rem;
         position: relative;
         top: 3.5rem;
     }
 
-    #score{
+    #score {
         text-align: center;
         font-size: 2rem;
         position: relative;
         top: 5rem;
     }
-    
-    div p{
+
+    div p {
         text-align: center;
         font-size: 1.5rem;
         position: relative;
         top: 0rem;
     }
-    
-    #left-mouse-button{
+
+    #left-mouse-button {
         padding-bottom: 2rem;
     }
-    
-    #game-world{
+
+    #game-world {
         width: 75vw;
         height: 25vw;
         margin-top: 150vw;
         position: relative;
         --ground-height: 10rem;
     }
-    
-    #game-area{
+
+    #game-area {
         margin: 12.5vw;
         margin-top: 8vw;
         width: 75vw;
@@ -198,8 +197,8 @@ div p{
         background-color: lightblue;
         bottom: 4rem;
     }
-    
-    #player{
+
+    #player {
         width: 4rem;
         height: 4rem;
         border: 1px solid black;
@@ -208,8 +207,8 @@ div p{
         bottom: 0;
         left: 2.5rem;
     }
-    
-    #obstacle{
+
+    #obstacle {
         width: 3rem;
         height: 3rem;
         border: 1px solid black;
@@ -221,8 +220,8 @@ div p{
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
-    
-    #ground{
+
+    #ground {
         background-color: rgb(75, 25, 25);
         margin: 12.5vw;
         width: 75vw;
@@ -231,8 +230,8 @@ div p{
         bottom: 0;
         left: 0;
     }
-    
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         z-index: 2;
@@ -246,13 +245,13 @@ div p{
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .modal-content{
+
+    .modal-content {
         position: relative;
         z-index: 2;
     }
-    
-    .modal-content img{
+
+    .modal-content img {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -262,13 +261,13 @@ div p{
         height: 20vw;
         top: 0rem;
     }
-    
-    #closeModal{
+
+    #closeModal {
         font-size: 2rem;
         font-weight: bold;
         cursor: pointer;
     }
-    
+
     .overlay {
         display: none;
         position: fixed;
@@ -282,48 +281,47 @@ div p{
 }
 
 /* Media Query for screens > 320px */
-@media (min-width: 320px) and (max-width: 388px){
-
-    body{
+@media (min-width: 320px) and (max-width: 388px) {
+    body {
         background-color: burlywood;
         overflow: hidden;
         font-size: 1rem;
     }
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 2.5rem;
         position: relative;
         top: 3.5rem;
     }
 
-    #score{
+    #score {
         text-align: center;
         font-size: 2rem;
         position: relative;
         top: 5rem;
     }
-    
-    div p{
+
+    div p {
         text-align: center;
         font-size: 1.5rem;
         position: relative;
         top: 0rem;
     }
-    
-    #left-mouse-button{
+
+    #left-mouse-button {
         padding-bottom: 1rem;
     }
-    
-    #game-world{
+
+    #game-world {
         width: 75vw;
         height: 25vw;
         margin-top: 150vw;
         position: relative;
         --ground-height: 10rem;
     }
-    
-    #game-area{
+
+    #game-area {
         margin: 12.5vw;
         margin-top: 8vw;
         width: 75vw;
@@ -333,8 +331,8 @@ div p{
         background-color: lightblue;
         bottom: 4rem;
     }
-    
-    #player{
+
+    #player {
         width: 4rem;
         height: 4rem;
         border: 1px solid black;
@@ -343,8 +341,8 @@ div p{
         bottom: 0;
         left: 2.5rem;
     }
-    
-    #obstacle{
+
+    #obstacle {
         width: 3rem;
         height: 3rem;
         border: 1px solid black;
@@ -356,8 +354,8 @@ div p{
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
-    
-    #ground{
+
+    #ground {
         background-color: rgb(75, 25, 25);
         margin: 12.5vw;
         width: 75vw;
@@ -366,8 +364,8 @@ div p{
         bottom: 0;
         left: 0;
     }
-    
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         z-index: 2;
@@ -381,13 +379,13 @@ div p{
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .modal-content{
+
+    .modal-content {
         position: relative;
         z-index: 2;
     }
-    
-    .modal-content img{
+
+    .modal-content img {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -397,13 +395,13 @@ div p{
         height: 20vw;
         top: 0rem;
     }
-    
-    #closeModal{
+
+    #closeModal {
         font-size: 3rem;
         font-weight: bold;
         cursor: pointer;
     }
-    
+
     .overlay {
         display: none;
         position: fixed;
@@ -417,47 +415,47 @@ div p{
 }
 
 /* Media Query for screens > 389px */
-@media (min-width: 389px)  and (max-width: 499px){
-    body{
+@media (min-width: 389px) and (max-width: 499px) {
+    body {
         background-color: burlywood;
         overflow: hidden;
         font-size: 1rem;
     }
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 2.5rem;
         position: relative;
         top: 3.5rem;
     }
 
-    #score{
+    #score {
         text-align: center;
         font-size: 2rem;
         position: relative;
         top: 5rem;
     }
-    
-    div p{
+
+    div p {
         text-align: center;
         font-size: 1.5rem;
         position: relative;
         top: 0rem;
     }
-    
-    #left-mouse-button{
+
+    #left-mouse-button {
         padding-bottom: 5rem;
     }
-    
-    #game-world{
+
+    #game-world {
         width: 75vw;
         height: 25vw;
         margin-top: 120vw;
         position: relative;
         --ground-height: 10rem;
     }
-    
-    #game-area{
+
+    #game-area {
         margin: 12.5vw;
         margin-top: 8vw;
         width: 75vw;
@@ -467,8 +465,8 @@ div p{
         background-color: lightblue;
         bottom: 4rem;
     }
-    
-    #player{
+
+    #player {
         width: 4rem;
         height: 4rem;
         border: 1px solid black;
@@ -477,8 +475,8 @@ div p{
         bottom: 0;
         left: 2.5rem;
     }
-    
-    #obstacle{
+
+    #obstacle {
         width: 3rem;
         height: 3rem;
         border: 1px solid black;
@@ -490,8 +488,8 @@ div p{
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
-    
-    #ground{
+
+    #ground {
         background-color: rgb(75, 25, 25);
         margin: 12.5vw;
         width: 75vw;
@@ -500,8 +498,8 @@ div p{
         bottom: 0;
         left: 0;
     }
-    
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         z-index: 2;
@@ -515,13 +513,13 @@ div p{
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .modal-content{
+
+    .modal-content {
         position: relative;
         z-index: 2;
     }
-    
-    .modal-content img{
+
+    .modal-content img {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -531,13 +529,13 @@ div p{
         height: 20vw;
         top: 0rem;
     }
-    
-    #closeModal{
+
+    #closeModal {
         font-size: 3rem;
         font-weight: bold;
         cursor: pointer;
     }
-    
+
     .overlay {
         display: none;
         position: fixed;
@@ -551,47 +549,47 @@ div p{
 }
 
 /* Media Query for screens > 500px */
-@media (min-width: 500px)  and (max-width: 699px){
-    body{
+@media (min-width: 500px) and (max-width: 699px) {
+    body {
         background-color: burlywood;
         overflow: hidden;
         font-size: 1rem;
     }
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 2.5rem;
         position: relative;
         top: 3.5rem;
     }
 
-    #score{
+    #score {
         text-align: center;
         font-size: 2rem;
         position: relative;
         top: 5rem;
     }
-    
-    div p{
+
+    div p {
         text-align: center;
         font-size: 2rem;
         position: relative;
         top: 0rem;
     }
-    
-    #left-mouse-button{
+
+    #left-mouse-button {
         padding-bottom: 9rem;
     }
-    
-    #game-world{
+
+    #game-world {
         width: 75vw;
         height: 25vw;
         margin-top: 105vw;
         position: relative;
         --ground-height: 10rem;
     }
-    
-    #game-area{
+
+    #game-area {
         margin: 12.5vw;
         margin-top: 8vw;
         width: 75vw;
@@ -601,8 +599,8 @@ div p{
         background-color: lightblue;
         bottom: 4rem;
     }
-    
-    #player{
+
+    #player {
         width: 4rem;
         height: 4rem;
         border: 1px solid black;
@@ -611,8 +609,8 @@ div p{
         bottom: 0;
         left: 2.5rem;
     }
-    
-    #obstacle{
+
+    #obstacle {
         width: 3rem;
         height: 3rem;
         border: 1px solid black;
@@ -624,8 +622,8 @@ div p{
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
-    
-    #ground{
+
+    #ground {
         background-color: rgb(75, 25, 25);
         margin: 12.5vw;
         width: 75vw;
@@ -634,8 +632,8 @@ div p{
         bottom: 0;
         left: 0;
     }
-    
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         z-index: 2;
@@ -649,13 +647,13 @@ div p{
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .modal-content{
+
+    .modal-content {
         position: relative;
         z-index: 2;
     }
-    
-    .modal-content img{
+
+    .modal-content img {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -665,13 +663,13 @@ div p{
         height: 20vw;
         top: 0rem;
     }
-    
-    #closeModal{
+
+    #closeModal {
         font-size: 3rem;
         font-weight: bold;
         cursor: pointer;
     }
-    
+
     .overlay {
         display: none;
         position: fixed;
@@ -685,47 +683,47 @@ div p{
 }
 
 /* Media Query for screens 700px to 999px */
-@media (min-width: 700px)  and (max-width: 999px){
-    body{
+@media (min-width: 700px) and (max-width: 999px) {
+    body {
         background-color: burlywood;
         overflow: hidden;
         font-size: 1rem;
     }
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 2.5rem;
         position: relative;
         top: 3.5rem;
     }
 
-    #score{
+    #score {
         text-align: center;
         font-size: 2rem;
         position: relative;
         top: 5rem;
     }
-    
-    div p{
+
+    div p {
         text-align: center;
         font-size: 2rem;
         position: relative;
         top: 0rem;
     }
-    
-    #left-mouse-button{
+
+    #left-mouse-button {
         padding-bottom: 9rem;
     }
-    
-    #game-world{
+
+    #game-world {
         width: 75vw;
         height: 25vw;
         margin-top: 75vw;
         position: relative;
         --ground-height: 10rem;
     }
-    
-    #game-area{
+
+    #game-area {
         margin: 12.5vw;
         margin-top: 8vw;
         width: 75vw;
@@ -735,8 +733,8 @@ div p{
         background-color: lightblue;
         bottom: 4rem;
     }
-    
-    #player{
+
+    #player {
         width: 4rem;
         height: 4rem;
         border: 1px solid black;
@@ -745,8 +743,8 @@ div p{
         bottom: 0;
         left: 2.5rem;
     }
-    
-    #obstacle{
+
+    #obstacle {
         width: 3rem;
         height: 3rem;
         border: 1px solid black;
@@ -758,8 +756,8 @@ div p{
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
-    
-    #ground{
+
+    #ground {
         background-color: rgb(75, 25, 25);
         margin: 12.5vw;
         width: 75vw;
@@ -768,8 +766,8 @@ div p{
         bottom: 0;
         left: 0;
     }
-    
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         z-index: 2;
@@ -783,13 +781,13 @@ div p{
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .modal-content{
+
+    .modal-content {
         position: relative;
         z-index: 2;
     }
-    
-    .modal-content img{
+
+    .modal-content img {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -799,13 +797,13 @@ div p{
         height: 20vw;
         top: 0rem;
     }
-    
-    #closeModal{
+
+    #closeModal {
         font-size: 4rem;
         font-weight: bold;
         cursor: pointer;
     }
-    
+
     .overlay {
         display: none;
         position: fixed;
@@ -819,47 +817,47 @@ div p{
 }
 
 /* Media Query for screens 1000px to 1440px */
-@media (min-width: 1000px)  and (max-width: 1440px){
-    body{
+@media (min-width: 1000px) and (max-width: 1440px) {
+    body {
         background-color: burlywood;
         overflow: hidden;
         font-size: 1rem;
     }
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 3.5rem;
         position: relative;
         top: 3.5rem;
     }
 
-    #score{
+    #score {
         text-align: center;
         font-size: 2.5rem;
         position: relative;
         top: 5rem;
     }
-    
-    div p{
+
+    div p {
         text-align: center;
         font-size: 3rem;
         position: relative;
         top: 0rem;
     }
-    
-    #left-mouse-button{
+
+    #left-mouse-button {
         padding-bottom: 8rem;
     }
-    
-    #game-world{
+
+    #game-world {
         width: 75vw;
         height: 25vw;
         margin-top: 75vw;
         position: relative;
         --ground-height: 10rem;
     }
-    
-    #game-area{
+
+    #game-area {
         margin: 12.5vw;
         margin-top: 8vw;
         width: 75vw;
@@ -869,8 +867,8 @@ div p{
         background-color: lightblue;
         bottom: 4rem;
     }
-    
-    #player{
+
+    #player {
         width: 4rem;
         height: 4rem;
         border: 1px solid black;
@@ -879,8 +877,8 @@ div p{
         bottom: 0;
         left: 2.5rem;
     }
-    
-    #obstacle{
+
+    #obstacle {
         width: 3rem;
         height: 3rem;
         border: 1px solid black;
@@ -892,8 +890,8 @@ div p{
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
-    
-    #ground{
+
+    #ground {
         background-color: rgb(75, 25, 25);
         margin: 12.5vw;
         width: 75vw;
@@ -902,8 +900,8 @@ div p{
         bottom: 0;
         left: 0;
     }
-    
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         z-index: 2;
@@ -917,13 +915,13 @@ div p{
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .modal-content{
+
+    .modal-content {
         position: relative;
         z-index: 2;
     }
-    
-    .modal-content img{
+
+    .modal-content img {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -933,13 +931,13 @@ div p{
         height: 20vw;
         top: 0rem;
     }
-    
-    #closeModal{
+
+    #closeModal {
         font-size: 4.5rem;
         font-weight: bold;
         cursor: pointer;
     }
-    
+
     .overlay {
         display: none;
         position: fixed;
@@ -953,47 +951,47 @@ div p{
 }
 
 /* Media Query for screens 1441px to 1920px */
-@media (min-width: 1441px)  and (max-width: 1660px){
-    body{
+@media (min-width: 1441px) and (max-width: 1660px) {
+    body {
         background-color: burlywood;
         overflow: hidden;
         font-size: 1rem;
     }
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 5rem;
         position: relative;
         top: 5rem;
     }
 
-    #score{
+    #score {
         text-align: center;
         font-size: 3.5rem;
         position: relative;
         top: 7rem;
     }
-    
-    div p{
+
+    div p {
         text-align: center;
         font-size: 4rem;
         position: relative;
         top: 0rem;
     }
-    
-    #left-mouse-button{
+
+    #left-mouse-button {
         padding-bottom: 4rem;
     }
-    
-    #game-world{
+
+    #game-world {
         width: 75vw;
         height: 25vw;
         margin-top: 60vw;
         position: relative;
         --ground-height: 10rem;
     }
-    
-    #game-area{
+
+    #game-area {
         margin: 12.5vw;
         margin-top: 8vw;
         width: 75vw;
@@ -1003,8 +1001,8 @@ div p{
         background-color: lightblue;
         bottom: 4rem;
     }
-    
-    #player{
+
+    #player {
         width: 4rem;
         height: 4rem;
         border: 1px solid black;
@@ -1013,8 +1011,8 @@ div p{
         bottom: 0;
         left: 2.5rem;
     }
-    
-    #obstacle{
+
+    #obstacle {
         width: 3rem;
         height: 3rem;
         border: 1px solid black;
@@ -1026,8 +1024,8 @@ div p{
         opacity: 1;
         transition: opacity 0.1s ease-in;
     }
-    
-    #ground{
+
+    #ground {
         background-color: rgb(75, 25, 25);
         margin: 12.5vw;
         width: 75vw;
@@ -1036,8 +1034,8 @@ div p{
         bottom: 0;
         left: 0;
     }
-    
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         z-index: 2;
@@ -1051,13 +1049,13 @@ div p{
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .modal-content{
+
+    .modal-content {
         position: relative;
         z-index: 2;
     }
-    
-    .modal-content img{
+
+    .modal-content img {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -1067,13 +1065,13 @@ div p{
         height: 10vw;
         top: 0rem;
     }
-    
-    #closeModal{
+
+    #closeModal {
         font-size: 6rem;
         font-weight: bold;
         cursor: pointer;
     }
-    
+
     .overlay {
         display: none;
         position: fixed;

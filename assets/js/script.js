@@ -15,161 +15,166 @@ let obstacleLeft;
 let scoreUpdateInterval;
 
 let isModalOpen = false;
+let isGameOver = false;
 let updateScoreFlag = true;
 
-// Learned from the walkthrough project 
-document.addEventListener("DOMContentLoaded", loadGame); 
+// Learned from the walkthrough project
+document.addEventListener("DOMContentLoaded", loadGame);
 closeModalButton.addEventListener("click", closeModal);
 window.addEventListener("click", playerJump);
 window.addEventListener("keydown", checkUpKey);
 setInterval(updateScore, 250);
 let collisionCheckInterval = setInterval(checkCollision, 10);
 
-/** 
- * Initialize the game once the DOM 
+/**
+ * Initialize the game once the DOM
  * has fully loaded.
-*/
+ */
 function loadGame() {
-    showModal();
+  showModal();
 
-    sec = 0;
-    obstaclePosition = 1350;
-    playerPosition = 0;
-    // Some of this code was learned from java2s.com
-    obstacleMoveInterval = setInterval(updateObstaclePosition, 10);
-    scoreUpdateInterval = setInterval(updateScore, 250);
+  sec = 0;
+  obstaclePosition = 1350;
+  playerPosition = 0;
+  // Some of this code was learned from java2s.com
+  obstacleMoveInterval = setInterval(updateObstaclePosition, 10);
+  scoreUpdateInterval = setInterval(updateScore, 250);
 }
 
-/** 
+/**
  * Shows the instruction modal.
-*/
-function showModal() {
-    modal.style.display = "block";
-    overlay.style.display = "block";
-    isModalOpen = true;
+ */
+function showModal() { //Learned from w3Schools
+  modal.style.display = "block";
+  overlay.style.display = "block";
+  isModalOpen = true;
 }
 
-/** 
+/**
  * Closes the instruction modal.
-*/
+ */
 function closeModal() {
-    modal.style.display = "none";
-    overlay.style.display = "none";
-    isModalOpen = false;
+  modal.style.display = "none";
+  overlay.style.display = "none";
+  isModalOpen = false;
 }
 
-/** 
+/**
  * Updates the position of the obstacle
  * back to the right side.
-*/
+ */
 function updateObstaclePosition() {
-    if (!isModalOpen) {
-        obstaclePosition -= 5;
-        obstacle.style.left = obstaclePosition + "px";
+  if (!isModalOpen) {
+    obstaclePosition -= 5;
+    obstacle.style.left = obstaclePosition + "px";
 
-        if (obstaclePosition <= -150) {
-            obstaclePosition = 1350;
-        }
-
-        if (obstaclePosition <= 5) {
-            obstacle.style.opacity = "0";
-        } else {
-            obstacle.style.opacity = "1";
-        }
+    if (obstaclePosition <= -150) {
+      obstaclePosition = 1350;
     }
+
+    if (obstaclePosition <= 5) {
+      obstacle.style.opacity = "0";
+    } else {
+      obstacle.style.opacity = "1";
+    }
+  }
 }
 
-/** 
+/**
  * Makes the player character "jump" by
  * moving it up in y.
-*/
+ */
 function playerJump() {
-    if (!isModalOpen) {
-        if (playerPosition === 0) {
-            playerPosition = 200;
-            player.style.bottom = playerPosition + "px";
-
-            document.getElementById("jumpSound").play();
-        }
-
-        setTimeout(function () {
-            playerPosition = 0;
-            player.style.bottom = playerPosition + "px";
-        }, 750);
+    if (!isModalOpen && !isGameOver) {
+      if (playerPosition === 0) {
+        playerPosition = 200;
+        player.style.bottom = playerPosition + "px";
+  
+        document.getElementById("jumpSound").play();
+      }
+  
+      setTimeout(function () {
+        playerPosition = 0;
+        player.style.bottom = playerPosition + "px";
+      }, 750);
     }
-}
+  }
 
-/** 
+/**
  * Checks if the "ArrowUp" key is being pressed.
  * If so, the playerJump function gets triggered.
-*/
+ */
 function checkUpKey(event) {
-    if (event.key === "ArrowUp") {
-        playerJump();
-    }
+  if (event.key === "ArrowUp") {
+    playerJump();
+  }
 }
 
-/** 
- * Puts a "0" infront of the score if the value is 
+/**
+ * Puts a "0" infront of the score if the value is
  * less than 9.
-*/
+ */
 function timer(val) {
-    if (val > 9) {
-        return val;
-    } else {
-        return "0" + val;
-    }
+  if (val > 9) {
+    return val;
+  } else {
+    return "0" + val;
+  }
 }
 
-/** 
+/**
  * Counts the game score.
-*/
+ */
 function updateScore() {
-    if (!isModalOpen && updateScoreFlag) {
-        document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
-        ++sec;
-    }
+  if (!isModalOpen && updateScoreFlag) {
+    document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
+    ++sec;
+  }
 }
 
 let collisionDetected = false;
 
-/** 
+/**
  * Checks if the player and the obstacle collide.
-*/
-function checkCollision() {
+ */
+function checkCollision() { // Adapted from ChatGPT
     if (!isModalOpen) {
-        playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
-        obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-
-        if (obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 210) {
-            if (!collisionDetected) {
-                collisionDetected = true;
-
-                clearInterval(obstacleMoveInterval);
-                clearInterval(scoreUpdateInterval);
-                clearInterval(collisionCheckInterval);
-
-                document.getElementById("collisionSound").play();
-
-                // Set updateScoreFlag to false to stop score updates
-                updateScoreFlag = false;
-
-                setTimeout(() => {
-                    Swal.fire({
-                        title: 'Game Over',
-                        text: 'Your final score is: ' + timer(--sec),
-                        icon: 'error',
-                        confirmButtonText: 'Try Again',
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            location.reload(); // Reload the page when "Try Again" is clicked
-                        }
-                    });
-                }, 200);
-                
-            }
-        } else {
-            collisionDetected = false;
+      playerTop = parseInt(
+        window.getComputedStyle(player).getPropertyValue("top"),
+      );
+      obstacleLeft = parseInt(
+        window.getComputedStyle(obstacle).getPropertyValue("left"),
+      );
+  
+      if (obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 210) {
+        if (!collisionDetected) {
+          collisionDetected = true;
+  
+          clearInterval(obstacleMoveInterval);
+          clearInterval(scoreUpdateInterval);
+          clearInterval(collisionCheckInterval);
+  
+          document.getElementById("collisionSound").play();
+  
+          updateScoreFlag = false;
+  
+          isGameOver = true;
+  
+          setTimeout(() => {
+            Swal.fire({
+              title: "Game Over",
+              text: "Your final score is: " + timer(--sec),
+              icon: "error",
+              confirmButtonText: "Try Again",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                location.reload();
+              }
+            });
+          }, 200);
         }
+      } else {
+        collisionDetected = false;
+      }
     }
-}
+  }

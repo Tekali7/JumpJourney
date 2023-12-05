@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!--Meta tags for SEO-->
-     <meta name="description"
-     content="Jump Journey. A fun and challenging jumping game.">
-    <meta name="keywords"
-     content="jump, fun, highscore, challenge">
+    <!--Meta tags for SEO-->
+    <meta name="description" content="Jump Journey. A fun and challenging jumping game.">
+    <meta name="keywords" content="jump, fun, highscore, challenge">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!--Title-->
@@ -23,65 +21,64 @@
 </head>
 
 <body>
-    
-  <!--Header-->
-<header>
-  <a href="index.html" aria-label="Back to Start">
-    <h1>Jump Journey</h1>
-  </a>
-</header>
 
-  <p id="score"></p>
+    <!--Header-->
+    <header>
+        <a href="index.html" aria-label="Back to Start">
+            <h1>Jump Journey</h1>
+        </a>
+    </header>
 
-  <!--Game content-->
-  <!--General structure learned from KnifeCircus-->
-<main>
-  <section id="game-world">
+    <p id="score"></p>
 
-    <div id="game-area">
-      <div id="player"></div>  
-      <div id="obstacle"></div>
-    </div>
+    <!--Game content-->
+    <!--General structure learned from KnifeCircus-->
+    <main>
+        <section id="game-world">
 
-    <div id="ground"></div>
+            <div id="game-area">
+                <div id="player"></div>
+                <div id="obstacle"></div>
+            </div>
 
-  </section>
+            <div id="ground"></div>
 
+        </section>
 
-  <!--Instructions Modal-->
-  <section>
-  <div id="modal-box" class="modal">
-    <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <div id="left-mouse-button">
-      <img src="assets/images/left-mouse-button.webp" alt="Left mouse button">
-      <p>Click the left mouse button to jump</p>
-      </div>
-      <div>
-      <img src="assets/images/up-arrow-button.webp" alt="Up arrow button">
-      <p>or click the up arrow button to jump</p>
-      </div>
-    </div>
-  </div>
+        <!--Instructions Modal-->
+        <section>
+            <div id="modal-box" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal">&times;</span>
+                    <div id="left-mouse-button">
+                        <img src="assets/images/left-mouse-button.webp" alt="Left mouse button">
+                        <p>Click the left mouse button to jump</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/up-arrow-button.webp" alt="Up arrow button">
+                        <p>or click the up arrow button to jump</p>
+                    </div>
+                </div>
+            </div>
 
-  <div id="overlay" class="overlay"></div>
-  </section>
-</main>
+            <div id="overlay" class="overlay"></div>
+        </section>
+    </main>
 
-  <!--Jump-->
-  <audio id="jumpSound">
-    <source src="assets/sounds/jump.wav" type="audio/wav">
-  </audio>
+    <!--Jump-->
+    <audio id="jumpSound">
+        <source src="assets/sounds/jump.wav" type="audio/wav">
+    </audio>
 
-  <!--Collision-->
-  <audio id="collisionSound">
-    <source src="assets/sounds/collision.wav" type="audio/wav">
-  </audio>
+    <!--Collision-->
+    <audio id="collisionSound">
+        <source src="assets/sounds/collision.wav" type="audio/wav">
+    </audio>
 
-  <!--SweetAlert script-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--SweetAlert script-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -104,6 +104,7 @@ The game provides the player with acoustic feedback when jumping or colliding wi
 ## Score Counter
 
 The score counter captures the current score that the user managed to play. This encourages the user to replay the game to try and break their recent high-score.
+<br>
 ![Score counter](assets/readme-imgs/score-counter.PNG)
 
 ## Game over SweetAlert
@@ -213,7 +214,7 @@ and
 
 ## Lighthouse Testing
 
-The website was tested using Lighthouse in Chrome DevTools throughout the development to check performance, accessibiltiy, best practices and SEO. The final test on Lighthouse was run on incognito mode.
+The website was tested using Lighthouse in Chrome DevTools throughout the development to check performance, accessibility, best practices and SEO. The final test on Lighthouse was run on incognito mode.
 
 - Lighthouse result for index.html
 ![Lighthouse result index page](assets/readme-imgs/lighthouse-result.PNG)
