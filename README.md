@@ -4,7 +4,7 @@ Set in a pretty landscape, the player must strategically jump over obstacles to 
 
 Deployed link to the website: https://tekali7.github.io/JumpJourney/
 
-![Responsitivity example](assets/readme-imgs/jump-journey-responsive.webp)
+![Responsitivity example](assets/readme-imgs/am-i-responsive.PNG)
 
 # Purpose of this project
 
@@ -95,37 +95,38 @@ The website consists of one page with numerous features which offer the user a p
 ## Header/Navigation
 
 The title of the game is a link that leads back to the start of the page. When clicked, the user can restart the game and refresh their memory of the instructions.
-![Header](assets/readme-imgs/header.webp)
+![Header](assets/readme-imgs/header.PNG)
 
 ## User-Friendly Interface
 
 The interface of the website is very user-friendly and is designed to provide easy navigation and gameplay. For example: The user can click anywhere on the screen to let the player jump.
-![User-Interface](assets/readme-imgs/user-interface.webp)
+![User-Interface](assets/readme-imgs/user-interface.PNG)
 
 ## Sound effects
 
 The game provides the player with acoustic feedback when jumping or colliding with the obstacle. This additional feedback increases the experience of the user on the website, as it increases the immersion of the game.
-![Sounds](assets/readme-imgs/sounds.webp)
+![Sounds](assets/readme-imgs/sounds.PNG)
 
 ## Score Counter
 
 The score counter captures the current score that the user managed to play. This encourages the user to replay the game to try and break their recent high-score.
-![Score counter](assets/readme-imgs/score-counter.webp)
+![Score counter](assets/readme-imgs/score-counter.PNG)
 
 ## Game over SweetAlert
 
 The game over SweetAlert function tells the user that the gaming session has ended. Informing them that they collided with the obstacle, thus ending the game. It displays the highest score that the user reached, as well as a "Try Again" button which gives the user the choice to refresh and replay the game.
-![Game over alert](assets/readme-imgs/game-over.webp)
+![Game over alert](assets/readme-imgs/game-over-modal.PNG)
 
 ## Instructions Modal
 
 The instructions modal informs the user about the possible ways to control the player, while holding the game on pause. It displays two images with short descriptions underneath each image. The first image displays a left mouse button and the second image displays a arrow up button.
-![Instructions Modal](assets/readme-imgs/modal.webp)
+![Instructions Modal](assets/readme-imgs/instructions-modal.PNG)
 
 ## Collision Detection
 
 The game checks if the player has collided with an obstacle every 10ms. If a collision occurs the game ends and the score stops counting.
-![Collision Detection](assets/readme-imgs/collision-detection.webp)
+<br>
+![Collision Detection](assets/readme-imgs/collision-detection.PNG)
 
 ## Future implementations
 
@@ -156,6 +157,7 @@ Future implementations for this website are.
 - Image compression: [Tinypng](<https://tinypng.com/>)
 - Favicon generator: [Favicon](<https://favicon.io/>)
 - Wireframe: [Balsamiq](<https://balsamiq.com/>)
+- Alert: [SweetAlert2](https://sweetalert2.github.io/)
 
 # Design
 
@@ -168,18 +170,18 @@ The fonts Merriweather and News Cycle from [Google fonts](<https://fonts.google.
 
 The color scheme was chosen to represent a landscape which the player travels through. The brown color under the player stands for the ground and the lightblue color in the background represents the sky. The WCAG color contrast checker extension for Chrome was used to determine fitting colors.
 
-![Color contrast checker](assets/readme-imgs/color-checker.webp)
+![Color contrast checker](assets/readme-imgs/color-checker.PNG)
 
 ## Wireframes
 
 - Instructions Modal Wireframe
-![Insctructions modal wireframe](assets/readme-imgs/)
+![Insctructions modal wireframe](assets/readme-imgs/instructions-modal-wireframe.PNG)
 
 - Game Wireframe
-![Game wireframe](assets/readme-imgs/)
+![Game wireframe](assets/readme-imgs/user-interface-wireframe.PNG)
 
 - Game over Wireframe
-![Game over wireframe](assets/readme-imgs/)
+![Game over wireframe](assets/readme-imgs/game-over-modal-wireframe.PNG)
 
 # Testing
 
@@ -191,22 +193,22 @@ The validation results are displayed with a snippet of the code to indicate thei
 ### HTML Validator
 
 - Validator result for index.html
-![Validator result index page](assets/readme-imgs/html-validator.webp)
+![Validator result index page](assets/readme-imgs/html-validator.PNG)
 
 ### CSS Validator
 
 - Validator result for style.css
-![Validator result stylesheet](assets/readme-imgs/css-validator.webp)
+![Validator result stylesheet](assets/readme-imgs/css-validator.PNG)
 
 - Validator warning
 
 This warning is due to the import of the Google fonts.
-![Validator warning stylesheet](assets/readme-imgs/css-validator-warning.webp)
+![Validator warning stylesheet](assets/readme-imgs/css-validator-warning.PNG)
 
 ### JSHint
 
 - Validator result for script.js
-![Validator result script](assets/readme-imgs/js-validator.webp)
+![Validator result script](assets/readme-imgs/js-validator.PNG)
 JSHint outputs 18 warnings which are considered aceptable. They are:
 1. 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
 
@@ -220,7 +222,7 @@ and
 The website was tested using Lighthouse in Chrome DevTools throughout the development to check performance, accessibiltiy, best practices and SEO. The final test on Lighthouse was run on incognito mode.
 
 - Lighthouse result for index.html
-![Lighthouse result index page](assets/readme-imgs/lighthouse-result.webp)
+![Lighthouse result index page](assets/readme-imgs/lighthouse-result.PNG)
 
 ## Manual Testing
 
@@ -344,6 +346,8 @@ Cloning allows you to make an exact copy of a code repository, usually for colla
 - Some of the code for the obstacle movement was learned from [java2s](http://www.java2s.com/ref/javascript/javascript-setinterval-move-element.html)
 
 - The code for the instructions modal was learned from [w3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+
+-The code for the SweetAlert was adapted from [ChatGPT](https://chat.openai.com/)
 
 ## Media
 
