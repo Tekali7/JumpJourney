@@ -17,7 +17,8 @@ let scoreUpdateInterval;
 let isModalOpen = false;
 let updateScoreFlag = true;
 
-document.addEventListener("DOMContentLoaded", loadGame);
+// Learned from the walkthrough project 
+document.addEventListener("DOMContentLoaded", loadGame); 
 closeModalButton.addEventListener("click", closeModal);
 window.addEventListener("click", playerJump);
 window.addEventListener("keydown", checkUpKey);
@@ -34,6 +35,7 @@ function loadGame() {
     sec = 0;
     obstaclePosition = 1350;
     playerPosition = 0;
+    // Some of this code was learned from java2s.com
     obstacleMoveInterval = setInterval(updateObstaclePosition, 10);
     scoreUpdateInterval = setInterval(updateScore, 250);
 }
