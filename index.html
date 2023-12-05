@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!--Meta tags for SEO-->
+     <meta name="description"
+     content="Jump Journey. A fun and challenging jumping game.">
+    <meta name="keywords"
+     content="jump, fun, highscore, challenge">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Title-->
     <title>Jump Journey</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -16,11 +24,17 @@
 
 <body>
     
+  <!--Header-->
+<header>
   <a href="index.html" aria-label="Back to Start">
-  <h1>Jump Journey</h1>
+    <h1>Jump Journey</h1>
   </a>
+</header>
+
   <p id="score"></p>
 
+  <!--Game content-->
+<main>
   <section id="game-world">
 
     <div id="game-area">
@@ -32,6 +46,9 @@
 
   </section>
 
+
+  <!--Instructions Modal-->
+  <section>
   <div id="modal-box" class="modal">
     <div class="modal-content">
       <span id="closeModal">&times;</span>
@@ -47,6 +64,8 @@
   </div>
 
   <div id="overlay" class="overlay"></div>
+  </section>
+</main>
 
     <script src="assets/js/script.js"></script>
 </body>
