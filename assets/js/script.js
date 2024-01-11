@@ -59,12 +59,13 @@ function closeModal() {
   isModalOpen = false;
 }
 
+
+const obstacleResetPosition = 1350;
+
 /**
  * Updates the position of the obstacle
  * back to the right side.
  */
-const obstacleResetPosition = 1350;
-
 function updateObstaclePosition() {
   if (!isModalOpen) {
     obstaclePosition -= 5;
@@ -146,8 +147,9 @@ function updateScore() {
             clearInterval(scoreUpdateInterval);
             clearInterval(collisionCheckInterval);
 
-            // Set the flag to prevent further checks
             hasWon = true;
+
+            document.getElementById("completionSound").play();
 
             // Show winning SweetAlert
             Swal.fire({
