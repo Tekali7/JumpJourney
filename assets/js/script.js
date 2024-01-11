@@ -122,14 +122,38 @@ function timer(val) {
   }
 }
 
+let hasWon = false;
+
 /**
  * Counts the game score.
  */
 function updateScore() {
-  if (!isModalOpen && updateScoreFlag) {
-    document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
-    ++sec;
-  }
+    if (!isModalOpen && updateScoreFlag && !hasWon) {
+        sec++;
+        document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
+
+        if (sec >= 200) {
+            // Stop the game
+            clearInterval(obstacleMoveInterval);
+            clearInterval(scoreUpdateInterval);
+            clearInterval(collisionCheckInterval);
+
+            // Set the flag to prevent further checks
+            hasWon = true;
+
+            // Show winning SweetAlert
+            Swal.fire({
+                title: "Congratulations!",
+                text: "You completed the journey!",
+                icon: "success",
+                confirmButtonText: "Play Again",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
+        }
+    }
 }
 
 let collisionDetected = false;
