@@ -63,19 +63,27 @@ function closeModal() {
  * Updates the position of the obstacle
  * back to the right side.
  */
+const obstacleResetPosition = 1350;
+
 function updateObstaclePosition() {
   if (!isModalOpen) {
     obstaclePosition -= 5;
     obstacle.style.left = obstaclePosition + "px";
 
     if (obstaclePosition <= -150) {
-      obstaclePosition = 1350;
+      obstaclePosition = obstacleResetPosition;
     }
 
     if (obstaclePosition <= 5) {
       obstacle.style.opacity = "0";
     } else {
       obstacle.style.opacity = "1";
+    }
+
+    // Check if the score is greater than or equal to 190
+    if (sec >= 192) {
+      // Stop the obstacle movement
+      clearInterval(obstacleMoveInterval);
     }
   }
 }
