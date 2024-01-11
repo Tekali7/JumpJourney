@@ -137,44 +137,45 @@ let collisionDetected = false;
 /**
  * Checks if the player and the obstacle collide.
  */
-function checkCollision() { // Adapted from ChatGPT
-    if (!isModalOpen) {
-      playerTop = parseInt(
-        window.getComputedStyle(player).getPropertyValue("top"),
-      );
-      obstacleLeft = parseInt(
-        window.getComputedStyle(obstacle).getPropertyValue("left"),
-      );
-  
-      if (obstacleLeft < 209 && obstacleLeft > 0 && playerTop >= 210) {
-        if (!collisionDetected) {
-          collisionDetected = true;
-  
-          clearInterval(obstacleMoveInterval);
-          clearInterval(scoreUpdateInterval);
-          clearInterval(collisionCheckInterval);
-  
-          document.getElementById("collisionSound").play();
-  
-          updateScoreFlag = false;
-  
-          isGameOver = true;
-  
-          setTimeout(() => {
-            Swal.fire({
-              title: "Game Over",
-              text: "Your final score is: " + timer(--sec),
-              icon: "error",
-              confirmButtonText: "Try Again",
-            }).then((result) => {
-              if (result.isConfirmed) {
-                location.reload();
-              }
-            });
-          }, 200);
-        }
+function checkCollision() {
+  if (!isModalOpen) {
+      const playerRect = player.getBoundingClientRect();
+      const obstacleRect = obstacle.getBoundingClientRect();
+      // Check for collision if the "rectangles" overlap
+      if (
+          playerRect.left < obstacleRect.right &&
+          playerRect.right > obstacleRect.left &&
+          playerRect.top < obstacleRect.bottom &&
+          playerRect.bottom > obstacleRect.top
+      ) {
+          if (!collisionDetected) {
+              collisionDetected = true;
+
+              clearInterval(obstacleMoveInterval);
+              clearInterval(scoreUpdateInterval);
+              clearInterval(collisionCheckInterval);
+
+              document.getElementById("collisionSound").play();
+
+              updateScoreFlag = false;
+
+              isGameOver = true;
+
+              setTimeout(() => {
+                  Swal.fire({
+                      title: "Game Over",
+                      text: "Your final score is: " + timer(--sec),
+                      icon: "error",
+                      confirmButtonText: "Try Again",
+                  }).then((result) => {
+                      if (result.isConfirmed) {
+                          location.reload();
+                      }
+                  });
+              }, 200);
+          }
       } else {
-        collisionDetected = false;
+          collisionDetected = false;
       }
-    }
   }
+}
