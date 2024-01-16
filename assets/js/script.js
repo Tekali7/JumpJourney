@@ -35,7 +35,7 @@ function loadGame() {
   showModal();
 
   sec = 0;
-  obstaclePosition = 1350;
+  obstaclePosition = 2000;
   playerPosition = 0;
   // Some of this code was learned from java2s.com
   obstacleMoveInterval = setInterval(updateObstaclePosition, 10);
@@ -61,7 +61,7 @@ function closeModal() {
 }
 
 
-const obstacleResetPosition = 1350;
+const obstacleResetPosition = 2000;
 
 /**
  * Updates the position of the obstacle
@@ -83,7 +83,7 @@ function updateObstaclePosition() {
     }
 
     // Check if the score is greater than or equal to 190
-    if (sec >= 192) {
+    if (sec >= 173) {
       // Stop the obstacle movement
       clearInterval(obstacleMoveInterval);
     }
