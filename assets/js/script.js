@@ -13,6 +13,7 @@ let obstacleMoveInterval;
 let playerTop;
 let obstacleLeft;
 let scoreUpdateInterval;
+let gameArea = document.getElementById("game-area")
 
 let isModalOpen = false;
 let isGameOver = false;
@@ -21,7 +22,7 @@ let updateScoreFlag = true;
 // Learned from the walkthrough project
 document.addEventListener("DOMContentLoaded", loadGame);
 closeModalButton.addEventListener("click", closeModal);
-window.addEventListener("click", playerJump);
+gameArea.addEventListener("click", playerJump);
 window.addEventListener("keydown", checkUpKey);
 setInterval(updateScore, 250);
 let collisionCheckInterval = setInterval(checkCollision, 10);
