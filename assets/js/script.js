@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", loadGame);
 closeModalButton.addEventListener("click", closeModal);
 gameArea.addEventListener("click", playerJump);
 window.addEventListener("keydown", checkUpKey);
+window.addEventListener("resize", updateObstaclePosition); // Add resize event listener
 setInterval(updateScore, 250);
 let collisionCheckInterval = setInterval(checkCollision, 10);
 
@@ -35,7 +36,7 @@ function loadGame() {
   showModal();
 
   sec = 0;
-  obstaclePosition = 2000;
+  updateObstaclePosition(); // Update obstacle position initially
   playerPosition = 0;
   // Some of this code was learned from java2s.com
   obstacleMoveInterval = setInterval(updateObstaclePosition, 10);
@@ -60,8 +61,7 @@ function closeModal() {
   isModalOpen = false;
 }
 
-
-const obstacleResetPosition = 2000;
+const obstacleResetPosition = 2000; // Set the initial reset position
 
 /**
  * Updates the position of the obstacle
@@ -69,11 +69,19 @@ const obstacleResetPosition = 2000;
  */
 function updateObstaclePosition() {
   if (!isModalOpen) {
-    obstaclePosition -= 5;
-    obstacle.style.left = obstaclePosition + "px";
+    let windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    
+    // If the obstacle position is not set, initialize it to the reset position
+    if (!obstaclePosition) {
+      obstaclePosition = windowWidth;
+    }
 
-    if (obstaclePosition <= -150) {
-      obstaclePosition = obstacleResetPosition;
+    obstaclePosition -= 5; // Move the obstacle to the left
+    obstacle.style.left = obstaclePosition + "px"; // Change right to left
+
+    if (obstaclePosition + obstacle.offsetWidth <= 0) {
+      // Reset to the right when reaching the left edge
+      obstaclePosition = windowWidth; // Change to this line to reset the obstacle to the right
     }
 
     if (obstaclePosition <= 5) {
@@ -82,8 +90,8 @@ function updateObstaclePosition() {
       obstacle.style.opacity = "1";
     }
 
-    // Check if the score is greater than or equal to 190
-    if (sec >= 173) {
+    // Check if the score is greater than or equal to 173
+    if (sec >= 188) {
       // Stop the obstacle movement
       clearInterval(obstacleMoveInterval);
     }
