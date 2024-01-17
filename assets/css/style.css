@@ -339,10 +339,10 @@ div p {
         display: none;
         position: fixed;
         z-index: 2;
-        top: 30%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 40%;
+        height: 50%;
         width: 70%;
         background-color: burlywood;
         padding: 20px;
