@@ -72,27 +72,26 @@ function updateObstaclePosition() {
   if (!isModalOpen) {
     let windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     
-    // If the obstacle position is not set, initialize it to the reset position
     if (!obstaclePosition) {
       obstaclePosition = windowWidth;
     }
 
-    // Adjust the speed based on the window width
+    // Adjusts the speed based on the window width
     let speed;
     if (windowWidth < 500) {
-      speed = obstacleSpeed / 1.8; // Half the speed when less than 500px
+      speed = obstacleSpeed / 1.8; 
     } else if (windowWidth >= 500 && windowWidth <= 768) {
-      speed = obstacleSpeed - obstacleSpeed / 3; // Reduce speed by a third when between 500px and 768px
+      speed = obstacleSpeed - obstacleSpeed / 3;
     } else {
       speed = obstacleSpeed;
     }
 
-    obstaclePosition -= speed; // Move the obstacle to the left
-    obstacle.style.left = obstaclePosition + "px"; // Change right to left
+    obstaclePosition -= speed;
+    obstacle.style.left = obstaclePosition + "px";
 
     if (obstaclePosition + obstacle.offsetWidth <= 0) {
-      // Reset to the right when reaching the left edge
-      obstaclePosition = windowWidth; // Change to this line to reset the obstacle to the right
+      // Resets to the right when left of gameArea is reached
+      obstaclePosition = windowWidth;
     }
 
     if (obstaclePosition <= 5) {
