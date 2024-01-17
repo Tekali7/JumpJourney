@@ -62,6 +62,7 @@ function closeModal() {
 }
 
 const obstacleResetPosition = 2000; // Set the initial reset position
+const obstacleSpeed = 5; // Set the initial speed
 
 /**
  * Updates the position of the obstacle
@@ -76,7 +77,10 @@ function updateObstaclePosition() {
       obstaclePosition = windowWidth;
     }
 
-    obstaclePosition -= 5; // Move the obstacle to the left
+    // Adjust the speed based on the window width
+    let speed = windowWidth < 500 ? obstacleSpeed / 2 : obstacleSpeed;
+
+    obstaclePosition -= speed; // Move the obstacle to the left
     obstacle.style.left = obstaclePosition + "px"; // Change right to left
 
     if (obstaclePosition + obstacle.offsetWidth <= 0) {
@@ -91,12 +95,13 @@ function updateObstaclePosition() {
     }
 
     // Check if the score is greater than or equal to 173
-    if (sec >= 188) {
+    if (sec >= 173) {
       // Stop the obstacle movement
       clearInterval(obstacleMoveInterval);
     }
   }
 }
+
 
 /**
  * Makes the player character "jump" by
