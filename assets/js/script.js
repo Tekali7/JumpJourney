@@ -154,7 +154,7 @@ let hasWon = false;
 function updateScore() {
     if (!isModalOpen && updateScoreFlag && !hasWon) {
         sec++;
-        document.getElementById("score").innerHTML = "Current Score: " + timer(sec);
+        document.getElementById("score").innerHTML = "Score: " + timer(sec);
 
         if (sec >= 200) {
             // Stop the game
@@ -213,7 +213,7 @@ function checkCollision() {
               setTimeout(() => {
                   Swal.fire({
                       title: "Game Over",
-                      text: "Your final score is: " + timer(--sec),
+                      text: "Your final score is: " + timer(sec),
                       icon: "error",
                       confirmButtonText: "Try Again",
                   }).then((result) => {
