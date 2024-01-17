@@ -78,7 +78,14 @@ function updateObstaclePosition() {
     }
 
     // Adjust the speed based on the window width
-    let speed = windowWidth < 500 ? obstacleSpeed / 2 : obstacleSpeed;
+    let speed;
+    if (windowWidth < 500) {
+      speed = obstacleSpeed / 1.8; // Half the speed when less than 500px
+    } else if (windowWidth >= 500 && windowWidth <= 768) {
+      speed = obstacleSpeed - obstacleSpeed / 3; // Reduce speed by a third when between 500px and 768px
+    } else {
+      speed = obstacleSpeed;
+    }
 
     obstaclePosition -= speed; // Move the obstacle to the left
     obstacle.style.left = obstaclePosition + "px"; // Change right to left
@@ -93,14 +100,9 @@ function updateObstaclePosition() {
     } else {
       obstacle.style.opacity = "1";
     }
-
-    // Check if the score is greater than or equal to 173
-    if (sec >= 173) {
-      // Stop the obstacle movement
-      clearInterval(obstacleMoveInterval);
-    }
   }
 }
+
 
 
 /**
