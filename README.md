@@ -100,7 +100,8 @@ The interface of the website is very user-friendly and is designed to provide ea
 ## Sound effects
 
 The game provides the player with acoustic feedback when jumping or colliding with the obstacle. There is also a rewarding sound upon completion of the game. This additional feedback increases the experience of the user on the website, as it increases the immersion of the game.
-![Sounds](assets/readme-imgs/sounds.PNG)
+<br>
+![Sounds](assets/readme-imgs/new-sounds.PNG)
 
 ## Score Counter
 
@@ -286,7 +287,6 @@ Testing has been carried out on the following browsers:
 - Chrome Version 118.0.5993.117/118
 - Safari Version 17.1
 - Edge Version 118.0.2088.76
-- Firefox Version 119.0
 
 ## Fixed Bugs
 
