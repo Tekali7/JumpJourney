@@ -215,7 +215,6 @@ JSHint outputs 29 warnings which are considered aceptable. They are:
 1. 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
 
 2.  'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-<br>
 
 3.  'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
 
@@ -289,15 +288,6 @@ Testing has been carried out on the following browsers:
 - Edge Version 118.0.2088.76
 
 ## Fixed Bugs
-
-* Bug: Score on screen and score on SweetAlert show different numbers (SweetAlert score is 1 higher)
-
-* Tried solutions:
-1. Use ++sec instead of sec++
-2. ClearInterval of the setInterval for the updateScore function
-3. Updating the score again after clearing the intervals by getting the score from the dom
-
-* Working solution: Decrement the value of "sec" by 1 with --sec
 
 * Bug: Collision detection doesnt function as intended or only on specific screen resolutions.
 
