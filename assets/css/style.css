@@ -32,7 +32,7 @@ h1 {
     font-size: 4rem;
     font-family: 'News Cycle', sans-serif;
     margin: 0;
-    top: 0;
+    top: 5px;
 }
 
 a {
@@ -278,6 +278,7 @@ div p {
         text-decoration: none;
         color: black;
         margin: 0;
+        margin-right: 2rem;
     }
     
     #score {
@@ -285,7 +286,7 @@ div p {
         font-family: 'News Cycle', sans-serif;
         margin: 0;
         margin-right: 1.2rem;
-        top: -5px;
+        top: 0px;
     }
 
     #game-world {
@@ -396,7 +397,7 @@ div p {
         font-family: 'News Cycle', sans-serif;
         margin: 0;
         margin-right: 1.2rem;
-        top: -5px;
+        top: 0px;
     }
 
     #game-world {
@@ -507,7 +508,7 @@ div p {
         font-family: 'News Cycle', sans-serif;
         margin: 0;
         margin-right: 1.2rem;
-        top: -5px;
+        top: 0px;
     }
 
     #game-world {
@@ -618,7 +619,7 @@ div p {
         font-family: 'News Cycle', sans-serif;
         margin: 0;
         margin-right: 1.2rem;
-        top: -5px;
+        top: 0px;
     }
 
     #game-world {
