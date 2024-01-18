@@ -9,7 +9,7 @@ Deployed link to the website: https://tekali7.github.io/JumpJourney/
 # Purpose of this project
 
 A website here to provide entertainment to the user in the form of a fast paced jumping game.
-The user controls a character which can be controlled using either the left mouse button or the up arrow key.
+The user controls a character which can be controlled by using either the left mouse button or the up arrow key. The ultimate goal is to reach a score of 200 to complete the journey and win the game.
 
 # Table of contents:
 
@@ -26,6 +26,7 @@ The user controls a character which can be controlled using either the left mous
     * [Score Counter](https://github.com/Tekali7/JumpJourney#score-counter)
     * [Game over SweetAlert](https://github.com/Tekali7/JumpJourney#game-over-sweetalert)
     * [Instructions Modal](https://github.com/Tekali7/JumpJourney#instructions-modal)
+    * [Victory Modal](https://github.com/Tekali7/JumpJourney#victory-modal)
     * [Collision Detection](https://github.com/Tekali7/JumpJourney#collision-detection)
     * [Future implementations](https://github.com/Tekali7/JumpJourney#future-implementations)
 
@@ -84,7 +85,7 @@ The game is targeted to a broad audience. Particularly those who enjoy casual an
 
 # Features
 
-The website consists of one page with numerous features which offer the user a pleasant website experience.
+The website consists of one page with numerous features which offer the user a pleasant website/gaming experience.
 
 ## Header/Navigation
 
@@ -93,12 +94,12 @@ The title of the game is a link that leads back to the start of the page. When c
 
 ## User-Friendly Interface
 
-The interface of the website is very user-friendly and is designed to provide easy navigation and gameplay. For example: The user can click anywhere on the screen to let the player jump.
+The interface of the website is very user-friendly and is designed to provide easy navigation and gameplay. For example: The user can click inside the game area to let the player jump.
 ![User-Interface](assets/readme-imgs/new-user-interface.PNG)
 
 ## Sound effects
 
-The game provides the player with acoustic feedback when jumping or colliding with the obstacle. This additional feedback increases the experience of the user on the website, as it increases the immersion of the game.
+The game provides the player with acoustic feedback when jumping or colliding with the obstacle. There is also a rewarding sound upon completion of the game. This additional feedback increases the experience of the user on the website, as it increases the immersion of the game.
 ![Sounds](assets/readme-imgs/sounds.PNG)
 
 ## Score Counter
@@ -116,6 +117,11 @@ The game over SweetAlert function tells the user that the gaming session has end
 
 The instructions modal informs the user about the possible ways to control the player, while holding the game on pause. It displays two images with short descriptions underneath each image. The first image displays a left mouse button and the second image displays a arrow up button.
 ![Instructions Modal](assets/readme-imgs/new-instructions-modal.PNG)
+
+## Victory Modal
+
+The victory modal congratulates the player on successfully completing the journey. It informs the player of their achievement with an uplifting message and an icon.The overall design and content of the modal aim to create a sense of accomplishment and satisfaction for the player's successful completion of the game.
+![Victory Modal](assets/readme-imgs/victory-modal.PNG)
 
 ## Collision Detection
 
@@ -204,13 +210,13 @@ This warning is due to the import of the Google fonts.
 
 - Validator result for script.js
 ![Validator result script](assets/readme-imgs/js-validator.PNG)
-JSHint outputs 18 warnings which are considered aceptable. They are:
+JSHint outputs 29 warnings which are considered aceptable. They are:
 1. 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
 
-and
+2.  'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
 <br>
 
-2.  'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+3.  'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
 
 ## Lighthouse Testing
 
