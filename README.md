@@ -269,17 +269,16 @@ The website was tested using Lighthouse in Chrome DevTools throughout the develo
 
 | Test Label | Test Action           | Expected Outcome | Test Outcome |
 | ---------- | --------------------- | ---------------- | ------------ |
-| Sound effects  | Jump/ Collide | Sound for jump/collision plays   | PASS         |
+| Sound effects  | Jump / Collide with obstacle / reach a score of 200 | Sound for jump/collision/victory plays   | PASS         |
 
 ### Device Testing
 
-Functionality, layout, and responsiveness were tested on the following devices and screens with issues in the collision detection:
-This game was optimized for 1920px x 1080px screens.
+Functionality, layout, and responsiveness were tested on the following devices and screens with no issues in the collision detection:
 
 - Lenovo Monitor 2560px x 1440px
 - Samsung Monitor 1920px x 1080px
-- Samsung Galaxy S9 1440px x 2960px
-- iPhone 11 1792px x 828px
+- Samsung Galaxy S9 360px x 740px
+- iPhone 11 414px x 896px
 
 ### Browser Compatibility
 
@@ -300,10 +299,17 @@ Testing has been carried out on the following browsers:
 
 * Working solution: Decrement the value of "sec" by 1 with --sec
 
+* Bug: Collision detection doesnt function as intended or only on specific screen resolutions.
+
+* Tried solutions:
+1. Adjust existing script
+2. Try out alternative collision detection logic
+
+* Working solution: Use getBoundingClientRect() method, learned from my mentor.
+
 ## Known Bugs
 
-* The player sometimes collides with the obstacle without touching it.
-Therefore leading to the player being either stuck in the "air" or getting back to the ground infront of the obstacle and triggering a game over.
+* Currently no known bugs.
 
 # Deployment
 
@@ -356,11 +362,13 @@ Cloning allows you to make an exact copy of a code repository, usually for colla
 
 - The code for the SweetAlert was adapted from [ChatGPT](https://chat.openai.com/)
 
+- The code/method for the collision detection was learned from my mentor and made by myself.
+
 ## Media
 
 - The left mouseclick and up arrow button image were found on [thenounproject](https://thenounproject.com/)
 
-- The jump and collision sounds were found on [mixkit](https://mixkit.co/free-sound-effects/)
+- The jump, collision and victory sounds were found on [mixkit](https://mixkit.co/free-sound-effects/)
 
 # Acknowledgments
 
