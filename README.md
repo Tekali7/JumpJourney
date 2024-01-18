@@ -4,7 +4,7 @@ Set in a pretty landscape, the player must strategically jump over obstacles to 
 
 Deployed link to the website: https://tekali7.github.io/JumpJourney/
 
-![Responsitivity example](assets/readme-imgs/am-i-responsive.PNG)
+![Responsitivity example](assets/readme-imgs/new-am-i-responsive.PNG)
 
 # Purpose of this project
 
@@ -94,7 +94,7 @@ The title of the game is a link that leads back to the start of the page. When c
 ## User-Friendly Interface
 
 The interface of the website is very user-friendly and is designed to provide easy navigation and gameplay. For example: The user can click anywhere on the screen to let the player jump.
-![User-Interface](assets/readme-imgs/user-interface.PNG)
+![User-Interface](assets/readme-imgs/new-user-interface.PNG)
 
 ## Sound effects
 
@@ -105,17 +105,17 @@ The game provides the player with acoustic feedback when jumping or colliding wi
 
 The score counter captures the current score that the user managed to play. This encourages the user to replay the game to try and break their recent high-score.
 <br>
-![Score counter](assets/readme-imgs/score-counter.PNG)
+![Score counter](assets/readme-imgs/new-score-counter.PNG)
 
 ## Game over SweetAlert
 
 The game over SweetAlert function tells the user that the gaming session has ended. Informing them that they collided with the obstacle, thus ending the game. It displays the highest score that the user reached, as well as a "Try Again" button which gives the user the choice to refresh and replay the game.
-![Game over alert](assets/readme-imgs/game-over-modal.PNG)
+![Game over alert](assets/readme-imgs/new-game-over-modal.PNG)
 
 ## Instructions Modal
 
 The instructions modal informs the user about the possible ways to control the player, while holding the game on pause. It displays two images with short descriptions underneath each image. The first image displays a left mouse button and the second image displays a arrow up button.
-![Instructions Modal](assets/readme-imgs/instructions-modal.PNG)
+![Instructions Modal](assets/readme-imgs/new-instructions-modal.PNG)
 
 ## Collision Detection
 
