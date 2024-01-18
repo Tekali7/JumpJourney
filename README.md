@@ -241,6 +241,12 @@ The website was tested using Lighthouse in Chrome DevTools throughout the develo
 | ---------- | --------------------- | ---------------- | ------------ |
 | Instructions modal| Close the modal | Game and score start running   | PASS         |
 
+#### Victory modal
+
+| Test Label | Test Action           | Expected Outcome | Test Outcome |
+| ---------- | --------------------- | ---------------- | ------------ |
+| Victory modal| Reach a score of 200 | Victory Modal appears   | PASS         |
+
 #### Score counter
 
 | Test Label | Test Action           | Expected Outcome | Test Outcome |
